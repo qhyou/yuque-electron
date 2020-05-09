@@ -1,0 +1,23 @@
+{
+  "name": "yuque-electron",
+  "productName": "语雀",
+  "version": "1.0.0",
+  "description": "YuQue desktop App using by Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:osx": "electron-packager . --out=dist/osx --platform=darwin --arch=x64 --icon=images/icons.icns",
+    "pack:win64": "electron-packager . --out=dist/win --platform=win32 --arch=x64 --icon=images/icons.ico",
+    "build": "npm run pack:osx && npm run pack:win64"
+  },
+  "keywords": [
+    "Electron",
+    "YuQue"
+  ],
+  "author": "imxfly",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-packager": "^14.2.1"
+  }
+}
